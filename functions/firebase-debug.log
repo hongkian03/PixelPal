@@ -1,0 +1,1118 @@
+[debug] [2025-10-16T22:23:42.517Z] ----------------------------------------------------------------------
+[debug] [2025-10-16T22:23:42.524Z] Command:       /usr/local/bin/firebase /Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase emulators:start --only functions
+[debug] [2025-10-16T22:23:42.524Z] CLI Version:   14.4.0
+[debug] [2025-10-16T22:23:42.524Z] Platform:      darwin
+[debug] [2025-10-16T22:23:42.524Z] Node Version:  v20.18.2
+[debug] [2025-10-16T22:23:42.525Z] Time:          Thu Oct 16 2025 18:23:42 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-10-16T22:23:42.525Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-16T22:23:42.742Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-16T22:23:42.744Z] > authorizing via signed-in user (hrggyg@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-10-16T22:23:43.249Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] ⚠  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
+[debug] [2025-10-16T22:23:43.251Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4001},{"address":"::1","family":"IPv6","port":4001}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-10-16T22:23:43.258Z] [hub] writing locator at /var/folders/z9/pl3cxz554v9ckwsz0kv8cj2c0000gn/T/hub-pixelpal25.json
+[debug] [2025-10-16T22:23:43.711Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-16T22:23:43.712Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-16T22:23:43.712Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-16T22:23:43.712Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4001},{"address":"::1","family":"IPv6","port":4001}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-10-16T22:23:43.724Z] defaultcredentials: writing to file /Users/kianhong/.config/firebase/hrggyg_gmail_com_application_default_credentials.json
+[debug] [2025-10-16T22:23:43.748Z] Setting GAC to /Users/kianhong/.config/firebase/hrggyg_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/kianhong/.config/firebase/hrggyg_gmail_com_application_default_credentials.json"}}
+[debug] [2025-10-16T22:23:43.749Z] Checked if tokens are valid: true, expires at: 1760655466443
+[debug] [2025-10-16T22:23:43.749Z] Checked if tokens are valid: true, expires at: 1760655466443
+[debug] [2025-10-16T22:23:43.750Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pixelpal25/adminSdkConfig [none]
+[debug] [2025-10-16T22:23:44.095Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pixelpal25/adminSdkConfig 200
+[debug] [2025-10-16T22:23:44.095Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pixelpal25/adminSdkConfig {"projectId":"pixelpal25","storageBucket":"pixelpal25.firebasestorage.app"}
+[info] i  functions: Watching "/Users/kianhong/Documents/PixelPal/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/kianhong/Documents/PixelPal/functions\" for Cloud Functions..."}}
+[debug] [2025-10-16T22:23:44.135Z] Validating nodejs source
+[debug] [2025-10-16T22:23:44.139Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+    at async FunctionsEmulator.connect (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:279:13)
+[debug] [2025-10-16T22:23:44.140Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "src/index.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: There was an error reading functions/package.json:
+
+ functions/src/index.js does not exist, can't deploy Cloud Functions {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: There was an error reading functions/package.json:\n\n functions/src/index.js does not exist, can't deploy Cloud Functions"}}
+[debug] [2025-10-16T22:23:44.150Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4001/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4001/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-10-16T22:24:53.243Z] File /Users/kianhong/Documents/PixelPal/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/package.json changed, reloading triggers"}}
+[debug] [2025-10-16T22:24:54.255Z] Validating nodejs source
+[debug] [2025-10-16T22:24:54.272Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-16T22:24:54.274Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T22:24:54.274Z] Building nodejs source
+[debug] [2025-10-16T22:24:54.275Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T22:24:54.284Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T22:24:54.298Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8402
+
+[debug] [2025-10-16T22:24:55.335Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-10-16T22:24:58.562Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  ui: Stopping Emulator UI {"metadata":{"emulator":{"name":"ui"},"message":"Stopping Emulator UI"}}
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  eventarc: Stopping Eventarc Emulator {"metadata":{"emulator":{"name":"eventarc"},"message":"Stopping Eventarc Emulator"}}
+[info] i  tasks: Stopping Cloud Tasks Emulator {"metadata":{"emulator":{"name":"tasks"},"message":"Stopping Cloud Tasks Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[info] i  logging: Stopping Logging Emulator {"metadata":{"emulator":{"name":"logging"},"message":"Stopping Logging Emulator"}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-16T22:24:58.596Z] Error: Cannot determine host and port of functions
+    at EmulatorRegistry.url (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/registry.js:114:19)
+    at FunctionsEmulator.getHttpFunctionUrl (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:71:47)
+    at FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:405:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-16T22:24:58.601Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2025-10-16T22:25:04.301Z] ----------------------------------------------------------------------
+[debug] [2025-10-16T22:25:04.304Z] Command:       /usr/local/bin/firebase /Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase emulators:start --only functions
+[debug] [2025-10-16T22:25:04.305Z] CLI Version:   14.4.0
+[debug] [2025-10-16T22:25:04.305Z] Platform:      darwin
+[debug] [2025-10-16T22:25:04.305Z] Node Version:  v20.18.2
+[debug] [2025-10-16T22:25:04.305Z] Time:          Thu Oct 16 2025 18:25:04 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-10-16T22:25:04.306Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-16T22:25:04.517Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-16T22:25:04.518Z] > authorizing via signed-in user (hrggyg@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-10-16T22:25:05.018Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] ⚠  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
+[debug] [2025-10-16T22:25:05.021Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4001},{"address":"::1","family":"IPv6","port":4001}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-10-16T22:25:05.027Z] [hub] writing locator at /var/folders/z9/pl3cxz554v9ckwsz0kv8cj2c0000gn/T/hub-pixelpal25.json
+[debug] [2025-10-16T22:25:05.473Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-16T22:25:05.474Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-16T22:25:05.474Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-16T22:25:05.474Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4001},{"address":"::1","family":"IPv6","port":4001}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-10-16T22:25:05.486Z] defaultcredentials: writing to file /Users/kianhong/.config/firebase/hrggyg_gmail_com_application_default_credentials.json
+[debug] [2025-10-16T22:25:05.506Z] Setting GAC to /Users/kianhong/.config/firebase/hrggyg_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/kianhong/.config/firebase/hrggyg_gmail_com_application_default_credentials.json"}}
+[debug] [2025-10-16T22:25:05.506Z] Checked if tokens are valid: true, expires at: 1760655466443
+[debug] [2025-10-16T22:25:05.507Z] Checked if tokens are valid: true, expires at: 1760655466443
+[debug] [2025-10-16T22:25:05.507Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pixelpal25/adminSdkConfig [none]
+[debug] [2025-10-16T22:25:05.856Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pixelpal25/adminSdkConfig 200
+[debug] [2025-10-16T22:25:05.857Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pixelpal25/adminSdkConfig {"projectId":"pixelpal25","storageBucket":"pixelpal25.firebasestorage.app"}
+[info] i  functions: Watching "/Users/kianhong/Documents/PixelPal/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/kianhong/Documents/PixelPal/functions\" for Cloud Functions..."}}
+[debug] [2025-10-16T22:25:05.901Z] Validating nodejs source
+[debug] [2025-10-16T22:25:05.906Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+    at async FunctionsEmulator.connect (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:279:13)
+[debug] [2025-10-16T22:25:05.906Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T22:25:05.907Z] Building nodejs source
+[debug] [2025-10-16T22:25:05.907Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T22:25:05.912Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T22:25:05.919Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8071
+
+[debug] [2025-10-16T22:25:06.609Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[info] ✔  functions[us-central1-generateInstructions]: http function initialized (http://127.0.0.1:5001/pixelpal25/us-central1/generateInstructions). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/pixelpal25/us-central1/generateInstructions)."}}
+[debug] [2025-10-16T22:25:10.689Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4001/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4001/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-10-16T22:32:12.793Z] [work-queue] {"queuedWork":["/pixelpal25/us-central1/generateInstructions-2025-10-16T22:32:12.793Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-16T22:32:12.801Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/pixelpal25/us-central1/generateInstructions-2025-10-16T22:32:12.793Z"],"workRunningCount":1}
+[debug] [2025-10-16T22:32:12.801Z] Accepted request POST /pixelpal25/us-central1/generateInstructions --> us-central1-generateInstructions
+[debug] [2025-10-16T22:32:12.817Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-10-16T22:32:12.819Z] [functions] Got req.url=/pixelpal25/us-central1/generateInstructions, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/pixelpal25/us-central1/generateInstructions, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T22:32:12.838Z] [worker-pool] addWorker(us-central1-generateInstructions) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateInstructions)"}}
+[debug] [2025-10-16T22:32:12.840Z] [worker-pool] Adding worker with key us-central1-generateInstructions, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateInstructions, total=1"}}
+[debug] [2025-10-16T22:32:13.813Z] [runtime-status] [38753] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-10-16T22:32:13.813Z] [runtime-status] [38753] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-16T22:32:13.813Z] [runtime-status] [38753] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-10-16T22:32:13.814Z] [runtime-status] [38753] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-16T22:32:14.028Z] [runtime-status] [38753] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-10-16T22:32:14.029Z] [runtime-status] [38753] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js\"}}"}}
+[debug] [2025-10-16T22:32:14.029Z] [runtime-status] [38753] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-16T22:32:14.031Z] [runtime-status] [38753] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-10-16T22:32:14.032Z] [runtime-status] [38753] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.5.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.5.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-10-16T22:32:14.033Z] [runtime-status] [38753] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/kianhong/Documents/PixelPal/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2025-10-16T22:32:14.040Z] [runtime-status] [38753] Functions runtime initialized. {"cwd":"/Users/kianhong/Documents/PixelPal/functions","node_version":"20.18.2"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Functions runtime initialized. {\"cwd\":\"/Users/kianhong/Documents/PixelPal/functions\",\"node_version\":\"20.18.2\"}"}}
+[debug] [2025-10-16T22:32:14.041Z] [runtime-status] [38753] Listening to port: /var/folders/z9/pl3cxz554v9ckwsz0kv8cj2c0000gn/T/fire_emu_b3ad68c887384e00.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[runtime-status] [38753] Listening to port: /var/folders/z9/pl3cxz554v9ckwsz0kv8cj2c0000gn/T/fire_emu_b3ad68c887384e00.sock"}}
+[debug] [2025-10-16T22:32:14.120Z] [worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: IDLE"}}
+[debug] [2025-10-16T22:32:14.121Z] [worker-pool] submitRequest(triggerId=us-central1-generateInstructions) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateInstructions)"}}
+[info] i  functions: Beginning execution of "us-central1-generateInstructions" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"Beginning execution of \"us-central1-generateInstructions\""}}
+[debug] [2025-10-16T22:32:14.122Z] [worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: BUSY"}}
+[debug] [2025-10-16T22:32:24.737Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateInstructions" in 10616.527041ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"Finished \"us-central1-generateInstructions\" in 10616.527041ms"}}
+[debug] [2025-10-16T22:32:24.738Z] [worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: IDLE"}}
+[debug] [2025-10-16T22:32:24.738Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-10-16T22:32:24.739Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-10-16T22:32:24.739Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-16T22:33:01.977Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/parseComment.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/parseComment.ts changed, reloading triggers"}}
+[debug] [2025-10-16T22:33:02.980Z] Validating nodejs source
+[debug] [2025-10-16T22:33:03.004Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-16T22:33:03.008Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T22:33:03.008Z] Building nodejs source
+[debug] [2025-10-16T22:33:03.009Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T22:33:03.014Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T22:33:03.021Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8314
+
+[debug] [2025-10-16T22:33:03.865Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-16T22:33:07.929Z] [worker-pool] Shutting down IDLE worker (us-central1-generateInstructions) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-generateInstructions)"}}
+[debug] [2025-10-16T22:33:07.929Z] [worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: FINISHING"}}
+[debug] [2025-10-16T22:33:07.940Z] [worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: exited"}}
+[debug] [2025-10-16T22:33:07.940Z] [worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateInstructions"},"extension":{},"message":"[worker-us-central1-generateInstructions-212e55a4-1781-4b1b-932a-a93659204a2e]: FINISHED"}}
+[debug] [2025-10-16T22:33:38.762Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/parseComment.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/parseComment.ts changed, reloading triggers"}}
+[debug] [2025-10-16T22:33:39.765Z] Validating nodejs source
+[debug] [2025-10-16T22:33:39.768Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-16T22:33:39.768Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T22:33:39.768Z] Building nodejs source
+[debug] [2025-10-16T22:33:39.768Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T22:33:39.770Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T22:33:39.771Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8153
+
+[debug] [2025-10-16T22:33:40.493Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-16T22:34:23.815Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers"}}
+[debug] [2025-10-16T22:34:24.820Z] Validating nodejs source
+[debug] [2025-10-16T22:34:24.825Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-16T22:34:24.826Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T22:34:24.826Z] Building nodejs source
+[debug] [2025-10-16T22:34:24.827Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T22:34:24.830Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T22:34:24.831Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8865
+
+[debug] [2025-10-16T22:34:25.616Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-16T23:32:14.989Z] File /Users/kianhong/Documents/PixelPal/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/package.json changed, reloading triggers"}}
+[debug] [2025-10-16T23:32:15.088Z] File /Users/kianhong/Documents/PixelPal/functions/package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/package-lock.json changed, reloading triggers"}}
+[debug] [2025-10-16T23:32:16.096Z] Validating nodejs source
+[debug] [2025-10-16T23:32:16.112Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-16T23:32:16.117Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T23:32:16.117Z] Building nodejs source
+[debug] [2025-10-16T23:32:16.118Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T23:32:16.123Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T23:32:16.126Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8722
+
+[debug] [2025-10-16T23:32:16.906Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-16T23:44:41.297Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers"}}
+[debug] [2025-10-16T23:44:42.307Z] Validating nodejs source
+[debug] [2025-10-16T23:44:42.322Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-16T23:44:42.324Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T23:44:42.324Z] Building nodejs source
+[debug] [2025-10-16T23:44:42.324Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T23:44:42.348Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T23:44:42.350Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8302
+
+[debug] [2025-10-16T23:44:43.126Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-16T23:51:35.141Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers"}}
+[debug] [2025-10-16T23:51:36.149Z] Validating nodejs source
+[debug] [2025-10-16T23:51:36.154Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-16T23:51:36.155Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-16T23:51:36.155Z] Building nodejs source
+[debug] [2025-10-16T23:51:36.156Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-16T23:51:36.158Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-16T23:51:36.160Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8438
+
+[debug] [2025-10-16T23:51:36.867Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T00:03:28.384Z] File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2025-10-17T00:03:28.478Z] File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2025-10-17T00:03:29.487Z] Validating nodejs source
+[debug] [2025-10-17T00:03:29.502Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T00:03:29.504Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T00:03:29.504Z] Building nodejs source
+[debug] [2025-10-17T00:03:29.504Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T00:03:29.509Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T00:03:29.511Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8364
+
+[debug] [2025-10-17T00:03:30.293Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T00:03:50.808Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers"}}
+[debug] [2025-10-17T00:03:51.814Z] Validating nodejs source
+[debug] [2025-10-17T00:03:51.823Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T00:03:51.824Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T00:03:51.825Z] Building nodejs source
+[debug] [2025-10-17T00:03:51.825Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T00:03:51.829Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T00:03:51.832Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8853
+
+[debug] [2025-10-17T00:03:52.523Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T00:24:32.537Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers"}}
+[debug] [2025-10-17T00:24:33.547Z] Validating nodejs source
+[debug] [2025-10-17T00:24:33.558Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T00:24:33.560Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T00:24:33.560Z] Building nodejs source
+[debug] [2025-10-17T00:24:33.560Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T00:24:33.567Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T00:24:33.571Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8052
+
+[debug] [2025-10-17T00:24:34.415Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T00:26:34.923Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers"}}
+[debug] [2025-10-17T00:26:35.932Z] Validating nodejs source
+[debug] [2025-10-17T00:26:35.942Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T00:26:35.944Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T00:26:35.944Z] Building nodejs source
+[debug] [2025-10-17T00:26:35.945Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T00:26:35.949Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T00:26:35.954Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8511
+
+[debug] [2025-10-17T00:26:36.714Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T00:29:54.507Z] File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/gemini/imageEdit.ts changed, reloading triggers"}}
+[debug] [2025-10-17T00:29:55.519Z] Validating nodejs source
+[debug] [2025-10-17T00:29:55.535Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T00:29:55.536Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T00:29:55.536Z] Building nodejs source
+[debug] [2025-10-17T00:29:55.537Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T00:29:55.545Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T00:29:55.548Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8513
+
+[debug] [2025-10-17T00:29:56.367Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T00:30:52.164Z] File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2025-10-17T00:30:53.169Z] Validating nodejs source
+[debug] [2025-10-17T00:30:53.179Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T00:30:53.181Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T00:30:53.181Z] Building nodejs source
+[debug] [2025-10-17T00:30:53.181Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T00:30:53.186Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T00:30:53.189Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8623
+
+[debug] [2025-10-17T00:30:53.926Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T03:01:48.055Z] File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2025-10-17T03:01:49.078Z] Validating nodejs source
+[debug] [2025-10-17T03:01:49.094Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T03:01:49.097Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T03:01:49.098Z] Building nodejs source
+[debug] [2025-10-17T03:01:49.098Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T03:01:49.111Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T03:01:49.120Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8204
+
+[debug] [2025-10-17T03:01:50.113Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}
+[debug] [2025-10-17T03:02:11.367Z] File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/kianhong/Documents/PixelPal/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2025-10-17T03:02:12.377Z] Validating nodejs source
+[debug] [2025-10-17T03:02:12.388Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync npm Unknown system error -8
+    at Object.spawnSync (node:internal/child_process:1123:20)
+    at Object.spawnSync (node:child_process:877:24)
+    at Object.spawnSync (pkg/prelude/bootstrap.js:2092:31)
+    at Function.spawnSync [as sync] (/Users/kianhong/.cache/firebase/tools/lib/node_modules/cross-spawn/index.js:26:23)
+    at Object.getLatestSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/versioning.js:74:32)
+    at Delegate.validate (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/functions/runtimes/node/index.js:86:20)
+    at FunctionsEmulator.discoverTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:313:35)
+    at async FunctionsEmulator.loadTriggers (/Users/kianhong/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:353:34)
+[debug] [2025-10-17T03:02:12.390Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-10-17T03:02:12.390Z] Building nodejs source
+[debug] [2025-10-17T03:02:12.390Z] Failed to find version of module node: reached end of search path /Users/kianhong/Documents/PixelPal/functions/node_modules
+[warn] ⚠  functions: You've requested "node" version "22", but the standalone Firebase CLI comes with bundled Node "20". 
+[info] ✔  functions: To use a different Node.js version, consider removing the standalone Firebase CLI and switching to "firebase-tools" on npm. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2025-10-17T03:02:12.398Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T03:02:12.402Z] Found firebase-functions binary at '/Users/kianhong/Documents/PixelPal/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8578
+
+[debug] [2025-10-17T03:02:13.133Z] Got response from /__/functions.yaml {"endpoints":{"generateInstructions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateInstructions"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: generateInstructions. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateInstructions."}}

@@ -2,14 +2,25 @@
 // instructions for an iterative image editing workflow. It does NOT
 // translate to numeric parameters or a fixed action schema.
 
-const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-class GeminiParseService {
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+export default class GeminiParseService {
+
+    private apiKey: string;
+    private client: GoogleGenerativeAI;
+    private model: any;
+
     constructor() {
-        this.apiKey = process.env.GEMINI_API_KEY;
+        const apiKey = process.env.GEMINI_API_KEY;
+        const model = process.env.GEMINI_MODEL;
+        if (!apiKey) throw new Error('GEMINI_API_KEY environment variable is not set');
+        if (!model) throw new Error('GEMINI_MODEL environment variable is not set');
+
+        this.apiKey = apiKey;
         this.client = new GoogleGenerativeAI(this.apiKey);
         this.model = this.client.getGenerativeModel({
-            model: process.env.GEMINI_MODEL,
+            model: model,
             systemInstruction: {
                 role: 'system',
                 parts: [
@@ -47,7 +58,7 @@ Constraints:
         };
     }
 
-    async generateInstructions(userInput, options = {}) {
+    async generateInstructions(userInput: string, options = {}) {
         if (!userInput || typeof userInput !== 'string') {
             throw new Error('Invalid input: userInput must be a non-empty string');
         }
@@ -83,9 +94,9 @@ Constraints:
         // remove accidental code fences
         const cleaned = text.trim().replace(/^```json\s*|\s*```$/g, '');
 
-        let parsed;
+        let parsed: { instructions: string[], warnings?: string[] };
         try {
-            parsed = JSON.parse(cleaned);
+            parsed = JSON.parse(cleaned) as { instructions: string[], warnings?: string[] };
         } catch (e) {
             const snippet = cleaned.slice(0, 400);
             throw new Error(`Failed to parse JSON from Gemini. First 400 chars:\n${snippet}`);
@@ -105,4 +116,4 @@ Constraints:
     }
 }
 
-module.exports = new GeminiParseService();
+export { GeminiParseService };
